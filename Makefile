@@ -1,7 +1,3 @@
-# Compiler and Linker, with Options (e.g. for "COMPILER.cpp")
-CXX := cl
-CXXFLAGS := -nologo -W3 -Zm300 -TP -EHsc -Ox -MT
-
 LDFLAGS = -LIBPATH:$(LEDA_LIBRARY_DIR) -LIBPATH:$(SUGIYAMA_LIBRARY_DIR) -LIBPATH:$(IMPLEMENTATIONS_LIBRARY_DIR)
 
 # Project-Directory-Structure
@@ -14,13 +10,6 @@ BINARY_DIR := bin
 SOURCE_FILE_NAMES := demo.cpp demo_only_cycle_break.cpp
 
 SOURCE_FILES := $(addprefix $(SOURCE_DIR)/, $(SOURCE_FILE_NAMES))
-
-# Dependencies
-SYSTEM_LIBS := user32.lib gdi32.lib msimg32.lib comdlg32.lib shell32.lib advapi32.lib wsock32.lib
-
-LEDA_INCLUDE_DIR := ..\incl
-LEDA_LIBRARY_DIR := ..\lib
-LEDA_LIB := leda.lib
 
 SUGIYAMA_INCLUDE_DIR := ..\architecture\incl
 SUGIYAMA_LIBRARY_DIR := ..\architecture\bin
