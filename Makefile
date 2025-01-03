@@ -9,9 +9,9 @@ SOURCE_DIR := src
 INTERMEDIATE_DIR := intermediates
 BINARY_DIR := bin
 
-LEDA_INCLUDE_DIR := ..\incl
-LEDA_LIBRARY_DIR := ..\bin
-LEDA_LIB := leda.lib
+LEDA_INCLUDE_DIR ?= ..\incl
+LEDA_LIBRARY_DIR ?= ..\bin
+LEDA_LIB ?= leda.lib
 
 # Relevant Source-Files
 SOURCE_FILE_NAMES := demo.cpp demo_only_cycle_break.cpp
